@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_my_site"
+        android:icon="@mipmap/my_site_icon"
+        android:title="My Site" />
+
+    <item
+        android:id="@+id/nav_reader"
+        android:icon="@mipmap/reader_icon"
+        android:title="Reader" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/notifications_icon"
+        android:title="Notifications" />
+
+</menu>
