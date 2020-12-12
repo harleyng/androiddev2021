@@ -9,4 +9,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="cloudy_day">Cloudy</string>
+    <string name="temp">24⁰C - 31⁰C</string>
+
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tues</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thur</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
 </resources>
