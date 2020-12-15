@@ -8,15 +8,14 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class ForecastFragment extends Fragment {
+public class WeatherFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle SaveInstanceState) {
-        View forecastFragment = inflater.inflate(R.layout.forecast_fragment, container, false);
-//        forecastFragment.setBackgroundColor(Color.parseColor("#BEC4F1"));
+        View weatherFragment = inflater.inflate(R.layout.weather_fragment, container, false);
 
-        return forecastFragment;
+        return weatherFragment;
     }
 }

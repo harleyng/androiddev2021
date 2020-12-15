@@ -19,4 +19,11 @@
     <string name="friday">Fri</string>
     <string name="saturday">Sat</string>
     <string name="sunday">Sun</string>
+    <string name="thunder">Thunder</string>
+    <string name="sunny">Sunny</string>
+    <string name="wind">Windy</string>
+    <string name="city">Paris</string>
+    <string name="detail_forecast">24⁰C
+        \n
+        Cloudy</string>
 </resources>
