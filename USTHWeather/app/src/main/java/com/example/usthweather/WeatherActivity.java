@@ -1,13 +1,17 @@
 package com.example.usthweather;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +32,7 @@ import com.google.android.material.tabs.TabLayout;
 public class WeatherActivity extends AppCompatActivity {
     private final static String TAG = "WeatherActivity";
 //    private AppBarConfiguration appBarConfiguration;
-
+    private MediaPlayer player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,7 @@ public class WeatherActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
 
-        MediaPlayer player = MediaPlayer.create(this, R.raw.song);
+        player = MediaPlayer.create(this, R.raw.song);
         player.start();
     }
 
@@ -70,6 +74,9 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        player.stop();
+        player.release();
+        player = null;
         Log.i(TAG, "on stop...");
     }
 
@@ -103,6 +110,28 @@ public class WeatherActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int page) {
 // returns a tab title corresponding to the specified page
             return titles[page];
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_refresh:
+                Toast.makeText(this, "Refreshing...", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_settings:
+                Log.d(TAG, "onOptionsItemSelected: click");
+                Intent intent = new Intent(this, PrefActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

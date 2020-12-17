@@ -24,4 +24,5 @@
     <string name="wind">Windy</string>
     <string name="city" translatable="false">Paris</string>
     <string name="detail_forecast">24⁰C\nCloudy</string>
+    <string name="action_refresh">Refresh</string>
 </resources>
