@@ -1,6 +1,8 @@
 package com.example.usthweather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +44,9 @@ public class WeatherActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         tabLayout.setupWithViewPager(pager);
+
+        MediaPlayer player = MediaPlayer.create(this, R.raw.song);
+        player.start();
     }
 
     @Override
