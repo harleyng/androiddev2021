@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.reader.Following">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:text="Filter"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/ic_baseline_filter_list_24"
+        android:gravity="left"
+        />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="90sp"
+        android:src="@drawable/reader" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="@string/fragment_following"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="When you follow sites, you'll see their content here."
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discover Sites"
+        android:layout_marginTop="70sp"
+        android:layout_gravity="center"
+        android:backgroundTint="#dc143c"/>
+
+</FrameLayout>

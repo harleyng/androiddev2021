@@ -16,6 +16,85 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.mysite.MySiteDetailActivity"
+            android:label="My Site Detail Activity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.mysite.StatsActivity"
+            android:label="My Site Stats Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+        <activity
+            android:name=".ui.mysite.ActivityLogActivity"
+            android:label="My Site Activity Log Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+        <activity
+            android:name=".ui.mysite.configure.SharingActivity"
+            android:label="My Site Sharing Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+        <activity
+            android:name=".ui.mysite.personalize.MenusActivity"
+            android:label="My Site Menus Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+        <activity
+            android:name=".ui.mysite.personalize.ThemesActivity"
+            android:label="My Site Themes Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+
+        <activity android:name=".ui.mysite.configure.PeopleActivity"
+            android:label="My Site People Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+        <activity android:name=".ui.mysite.publish.media.MediaActivity"
+            android:label="My Site Media Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+
+        <activity android:name=".ui.mysite.publish.posts.PostsActivity"
+            android:label="My Site Posts Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
+
+        <activity android:name=".ui.mysite.publish.pages.PagesActivity"
+            android:label="My Site Pages Activity"
+            android:parentActivityName=".ui.mysite.MySiteDetailActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wordpress.ui.mysite.MySiteDetailActivity" />
+        </activity>
     </application>
 
 </manifest>

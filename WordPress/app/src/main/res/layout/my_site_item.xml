@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_extra_extra_medium_large"
+    android:layout_marginTop="@dimen/margin_extra_medium_large"
+    tools:ignore="RtlSymmetry"
+    android:padding="@dimen/margin_medium_large"
+    android:background="@drawable/my_site_item_border">
+
+    <!--            <ProgressBar-->
+<!--                android:id="@+id/my_site_icon_progress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="@dimen/margin_large"-->
+<!--                android:layout_marginRight="@dimen/margin_large"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:indeterminate="true"-->
+<!--                android:visibility="gone" />-->
+
+    <ImageView
+        android:id="@+id/my_site_blavatar"
+        android:layout_width="@dimen/my_site_blavatar_sz"
+        android:layout_height="@dimen/my_site_blavatar_sz"
+        android:layout_marginStart="@dimen/margin_extra_medium_large"
+        android:layout_marginLeft="@dimen/margin_extra_medium_large"
+        android:contentDescription="@string/my_site_icon_content_description"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/switch_site"
+            app:layout_constraintStart_toEndOf="@+id/my_site_blavatar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/site_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/site_title"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/blavatar_container"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/site_url"
+                android:textColor="@color/gray_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/blavatar_container"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/switch_site"
+        android:layout_width="@dimen/redirect_my_site_function_width"
+        android:layout_height="@dimen/redirect_my_site_function_height"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:adjustViewBounds="true"
+        android:background="@color/gray_90"
+        android:contentDescription="@string/my_site_btn_switch_site"
+        android:src="@drawable/ic_angle_right_solid"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

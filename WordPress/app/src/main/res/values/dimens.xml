@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="site_title">20sp</dimen>
+    <dimen name="site_detail_icon_sz">84dp</dimen>
+    <dimen name="redirect_my_site_function_width">12dp</dimen>
+    <dimen name="redirect_my_site_function_height">20dp</dimen>
+    <dimen name="activity_title">16sp</dimen>
+    <dimen name="activity_icon_size">32dp</dimen>
+</resources>

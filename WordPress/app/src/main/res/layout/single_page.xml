@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:rowCount="3">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="393dp"
+        android:layout_height="390dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+    <TextView   />
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="67dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:backgroundTint="#dc9e1a"
+            android:text="B1" />
+
+        <Button
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:backgroundTint="#00c853"
+            android:text="B1" />
+
+        <Button
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:backgroundTint="#141ba9"
+            android:text="B1" />
+
+        <Button
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:backgroundTint="#dc1a8b"
+            android:text="B1" />
+
+    </LinearLayout>
+
+
+</GridLayout>

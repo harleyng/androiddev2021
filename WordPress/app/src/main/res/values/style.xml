@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Wordpress" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <!-- Material theme -->
+        <item name="colorPrimary">@color/blue_50</item>
+        <item name="colorPrimaryVariant">@color/blue_70</item>
+        <item name="colorSecondary">@color/pink_50</item>
+        <item name="colorSecondaryVariant">@color/pink_70</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorError">@color/red_50</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorOnBackground">@android:color/black</item>
+        <item name="colorOnSurface">@android:color/black</item>
+        <item name="colorOnError">@android:color/white</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorControlActivated">@color/primary_30</item>
+
+<!--        <item name="toolbarIconNormalColor">@color/grey_darken_20</item>-->
+<!--        <item name="toolbarIconHighlightColor">@color/almost_black</item>-->
+<!--        <item name="toolbarIconDisabledColor">@color/grey_lighten_20</item>-->
+
+        <item name="toolbarStyle">@style/WordPress.ToolBar</item>
+        <item name="tabStyle">@style/WordPress.TabLayout</item>
+        <item name="appBarLayoutStyle">@style/WordPress.AppBarLayout</item>
+        <item name="snackbarStyle">@style/Widget.MaterialComponents.Snackbar</item>
+
+        <!-- we can remove it after moving away from Bridge version of theme -->
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView</item>
+        <item name="floatingActionButtonStyle">@style/WordPress.FloatingActionButton</item>
+
+<!--        <item name="followButtonStyle">@style/Reader.Follow.Button</item>-->
+
+<!--        <item name="wpColorError">@color/error</item>-->
+<!--        <item name="wpColorSuccess">@color/green_50</item>-->
+<!--        <item name="wpColorWarningDark">@color/warning_50</item>-->
+<!--        <item name="wpColorWarningLight">@color/yellow_20</item>-->
+<!--        <item name="wpColorAppBar">?attr/colorSurface</item>-->
+<!--        <item name="wpColorOnSurfaceMedium">@color/material_on_surface_emphasis_medium</item>-->
+<!--        <item name="wpColorActionModeIcon">?attr/colorOnSurface</item>-->
+<!--        <item name="wpColorSurfaceSecondary">@color/neutral_5</item>-->
+<!--        <item name="wpColorLoginPrologueBg">@color/blue_0</item>-->
+
+<!--        <item name="colorGutenbergDivider">@color/wp_grey_lighten_30</item>-->
+<!--        <item name="colorGutenbergBackground">@android:color/white</item>-->
+
+        <item name="listPopupWindowStyle">
+            @style/Widget.MaterialComponents.PopupMenu.ListPopupWindow
+        </item>
+        <item name="popupMenuStyle">@style/Widget.MaterialComponents.PopupMenu</item>
+        <item name="actionOverflowMenuStyle">
+            @style/Widget.MaterialComponents.PopupMenu.Overflow
+        </item>
+
+        <item name="bottomSheetDialogTheme">
+            @style/WordPress.BottomSheetDialogTheme
+        </item>
+
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Light.WordPress</item>
+<!--        <item name="android:actionDropDownStyle">@style/DropDownNav.WordPress</item>-->
+<!--        <item name="android:actionModeCloseButtonStyle">-->
+<!--            @style/ActionButton.CloseMode.WordPress-->
+<!--        </item>-->
+        <item name="android:actionBarTabTextStyle">@style/TabTextStyle.WordPress</item>
+<!--        <item name="android:actionBarTabBarStyle">@style/TabBarStyle.WordPress</item>-->
+<!--        <item name="android:statusBarColor">?attr/colorSurface</item>-->
+
+<!--        <item name="colorButtonNormal">@color/light_gray</item>-->
+<!--        <item name="android:windowLightStatusBar">true</item>-->
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.WordPress.Widget</item>
+
+        <item name="windowActionModeOverlay">true</item>
+<!--        <item name="searchViewStyle">@style/WordPress.SearchViewStyle</item>-->
+
+<!--        <item name="actionModeStyle">@style/WordPress.ActionMode</item>-->
+<!--        <item name="actionModeCloseButtonStyle">@style/WordPress.ActionMode.CloseButton</item>-->
+<!--        <item name="actionMenuTextColor">@color/on_surface_disabled_selector</item>-->
+<!--        <item name="actionOverflowButtonStyle">-->
+<!--            @style/WordPress.ActionMode.OverflowButtonStyle-->
+<!--        </item>-->
+<!--        <item name="toolbarNavigationButtonStyle">-->
+<!--            @style/WordPress.ActionBar.Navigation-->
+<!--        </item>-->
+
+        <!-- Modal Layout Picker -->
+<!--        <item name="categoriesButtonBackground">@color/mlp_categories_button_background</item>-->
+<!--        <item name="categoriesButtonBackgroundSelected">@color/grey_900</item>-->
+<!--        <item name="mlpDividerColor">@color/grey_300</item>-->
+<!--        <item name="layoutPickerBackground">@color/white</item>-->
+
+        <!-- Material Date Range Picker -->
+        <item name="materialCalendarStyle">@style/Widget.MaterialComponents.MaterialCalendar</item>
+<!--        <item name="materialCalendarFullscreenTheme">@style/WordPress.MaterialCalendarFullscreenTheme</item>-->
+<!--        <item name="materialCalendarTheme">@style/WordPress.MaterialCalendarTheme</item>-->
+    </style>
+
+    <style name="WordPress.ToolBar" parent="Widget.MaterialComponents.Toolbar.Surface">
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="android:background">@null</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.DayNight</item>
+        <item name="titleTextAppearance">@style/WordPress.ToolBar.Title</item>
+<!--        <item name="android:elevation">0dp</item>-->
+        <item name="colorControlNormal">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="WordPress.ToolBar.Title" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="WordPress.TabLayout" parent="Widget.MaterialComponents.TabLayout.Colored">
+<!--        <item name="android:background">@drawable/tab_layout_background</item>-->
+<!--        <item name="android:elevation">0dp</item>-->
+        <item name="android:duplicateParentState">true</item>
+<!--        <item name="tabTextColor">?attr/wpColorOnSurfaceMedium</item>-->
+        <item name="tabSelectedTextColor">?attr/colorOnSurface</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="android:layout_marginBottom">@dimen/bottom_tabs_divider_size</item>
+    </style>
+
+    <style name="WordPress.AppBarLayout" parent="Widget.MaterialComponents.AppBarLayout.Surface">
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="liftOnScroll">true</item>
+    </style>
+
+    <style name="WordPress.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+<!--        <item name="android:backgroundTint">?attr/colorSecondary</item>-->
+    </style>
+
+    <style name="WordPress.BottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+<!--        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="bottomSheetStyle">@style/WordPress.BottomSheetDialogTheme.BottomSheetStyle
+        </item>
+    </style>
+
+    <style name="WordPress.BottomSheetDialogTheme.BottomSheetStyle" parent="@style/Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">
+            @style/WordPress.BottomSheetDialogTheme.ShapeAppearanceOverlay
+        </item>
+    </style>
+
+    <style name="WordPress.BottomSheetDialogTheme.ShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/bottom_sheet_handle_container_radius</item>
+        <item name="cornerSizeTopLeft">@dimen/bottom_sheet_handle_container_radius</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="Theme.WordPress.Widget" parent="Theme.AppCompat">
+<!--        <item name="android:popupMenuStyle">@style/PopupMenu.WordPress</item>-->
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Light.WordPress</item>
+    </style>
+
+    <style name="DropDownListView.Light.WordPress" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:fadeScrollbars">false</item>
+<!--        <item name="android:scrollbarThumbVertical">-->
+<!--            @drawable/bg_rectangle_black_translucent_50_3dp-->
+<!--        </item>-->
+    </style>
+
+<!--    <style name="DropDownNav.WordPress" >-->
+<!--        &lt;!&ndash;        parent="android:Widget.Material.Light.Spinner"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        <item name="android:background">@drawable/spinner_background_ab_wordpress</item>&ndash;&gt;-->
+<!--        <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>-->
+<!--    </style>-->
+
+<!--    <style name="ActionButton.CloseMode.WordPress" parent="android:Widget.Material.ActionButton.CloseMode">-->
+<!--        <item name="android:background">@drawable/btn_cab_done_wordpress</item>-->
+<!--    </style>-->
+
+<!--    <style name="TabTextStyle.WordPress" parent="android:Widget.Material.ActionBar.TabText" />-->
+
+    <style name="WordPress.ActionBar" parent="ThemeOverlay.AppCompat.DayNight">
+        <item name="android:textColorSecondary">?attr/colorOnSurface</item>
+        <item name="iconTint">?attr/colorOnSurface</item>
+        <item name="colorControlNormal">?attr/colorOnSurface</item>
+        <item name="android:editTextColor">?attr/colorOnSurface</item>
+<!--        <item name="android:textColorHint">?attr/wpColorOnSurfaceMedium</item>-->
+    </style>
+
+    <style name="MySiteQuickActionButtonContainer">
+        <item name="android:layout_width">@dimen/my_site_quick_action_button_container_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MySiteQuickActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="borderWidth">0dp</item>
+        <item name="android:backgroundTint">@color/gray_90</item>
+        <item name="elevation">@dimen/card_elevation</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+<!--        <item name="android:backgroundTint">?attr/colorSurface</item>-->
+<!--        <item name="tint">?attr/wpColorOnSurfaceMedium</item>-->
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="MySiteQuickActionButtonLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="MySiteListRowLayout">
+        <item name="android:background">@color/gray_90</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@dimen/content_margin_site_row_end</item>
+        <item name="android:paddingLeft">@dimen/content_margin_site_row_start</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="MySiteListRowIcon">
+<!--        <item name="tint">?attr/wpColorOnSurfaceMedium</item>-->
+        <item name="android:layout_width">@dimen/my_site_list_row_icon_size</item>
+        <item name="android:layout_height">@dimen/my_site_list_row_icon_size</item>
+<!--        <item name="android:layout_alignParentStart">true</item>-->
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/my_site_list_row_icon_margin_right</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="MySiteListRowTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/margin_medium</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="android:paddingTop">@dimen/margin_large</item>
+        <item name="android:paddingBottom">@dimen/margin_large</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MySiteListHeader">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingBottom">@dimen/my_site_margin_general</item>
+        <item name="android:paddingStart">@dimen/content_margin_site_row_start</item>
+        <item name="android:paddingTop">@dimen/my_site_list_row_icon_margin_right</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle2</item>
+    </style>
+
+    <style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="WordPress.CollapsedToolbarLayout" parent="Base.Wordpress">
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+        <item name="collapsedTitleTextAppearance">
+            @style/TextAppearance.App.CollapsingToolbar.Collapsed
+        </item>
+        <item name="expandedTitleTextAppearance">
+            @style/TextAppearance.App.CollapsingToolbar.Expanded
+        </item>
+        <item name="expandedTitleMarginBottom">@dimen/collapsible_toolbar_expanded_bottom_margin
+        </item>
+        <item name="expandedTitleMarginStart">16dp</item>
+    </style>
+
+    <style name="TabLayoutCustom" parent="Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="background">@color/black</item>
+        <item name="colorOnPrimary">@color/gray_20</item>
+    </style>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">8sp</item>
+    </style>
+</resources>

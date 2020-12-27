@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.mysite.ActivityLogFragment">
+
+    <ScrollView
+        android:id="@+id/activity_log_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--Date-->
+            <com.example.wordpress.widgets.WPTextView
+                style="@style/MySiteListHeader"
+                android:text="@string/activity_log_date1" />
+
+            <GridView
+                android:id="@+id/activity_log_list1"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="@color/gray_90"
+                android:numColumns="1" />
+            <!--Date-->
+            <com.example.wordpress.widgets.WPTextView
+                style="@style/MySiteListHeader"
+                android:text="@string/activity_log_date2" />
+
+            <GridView
+                android:id="@+id/activity_log_list2"
+                android:layout_width="match_parent"
+                android:layout_height="191dp"
+                android:background="@color/gray_90"
+                android:numColumns="1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_border"
+        app:itemIconTint="@drawable/navigation_view_color"
+        app:itemTextColor="@drawable/navigation_view_color"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_log_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

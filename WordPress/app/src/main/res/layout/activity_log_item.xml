@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_extra_extra_medium_large"
+    android:layout_marginTop="@dimen/margin_extra_medium_large"
+    tools:ignore="RtlSymmetry"
+    android:background="@color/gray_90"
+    android:padding="@dimen/margin_medium_large">
+
+    <!--            <ProgressBar-->
+<!--                android:id="@+id/my_site_icon_progress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="@dimen/margin_large"-->
+<!--                android:layout_marginRight="@dimen/margin_large"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:indeterminate="true"-->
+<!--                android:visibility="gone" />-->
+
+    <ImageView
+        android:id="@+id/activity_icon"
+        android:layout_width="@dimen/activity_icon_size"
+        android:layout_height="@dimen/activity_icon_size"
+        android:layout_marginStart="@dimen/margin_extra_medium_large"
+        android:layout_marginLeft="@dimen/margin_extra_medium_large"
+        android:contentDescription="@string/my_site_icon_content_description"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="279dp"
+        android:layout_height="43dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_icon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_title"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/blavatar_container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/activity_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/blavatar_container"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
