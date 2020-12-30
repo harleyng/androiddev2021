@@ -2,31 +2,17 @@ package com.example.usthweather;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
-import android.provider.Settings;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDirections;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -126,7 +112,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
-                refresh();
+                new refresh().execute();
                 return true;
             case R.id.action_settings:
                 Log.d(TAG, "onOptionsItemSelected: click");
@@ -138,35 +124,29 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
-    private void refresh() {
-        final Handler handler = new Handler(Looper.getMainLooper()) {
-            @Override
-            public void handleMessage(Message msg) {
-        // This method is executed in main thread
-                String content = msg.getData().getString("server_response");
-                Toast.makeText(getApplicationContext(), content, Toast.LENGTH_SHORT).show();
+    private class refresh extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... voids) {
+            try
+            {
+                Thread.sleep( 1000 );
             }
-        };
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-        // this method is run in a worker thread
-                try {
-        // wait for 5 seconds to simulate a long network access
-                    Thread.sleep(5000);
-                }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-        // Assume that we got our data from server
-                Bundle bundle = new Bundle();
-                bundle.putString("server_response", "some sample json here");
-        // notify main thread
-                Message msg = new Message();
-                msg.setData(bundle);
-                handler.sendMessage(msg);
+            catch ( InterruptedException e )
+            {
+                e.printStackTrace();
             }
-        });
-        t.start();
+            return null;
+        }
+
+        protected void onProgressUpdate(Void... voids) {
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            Toast.makeText(getApplicationContext(),
+                    "some sample json here",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
     }
 }
